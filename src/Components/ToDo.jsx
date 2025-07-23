@@ -1,11 +1,27 @@
-import React from 'react'
+import "./styles.css";
+import { useState, useEffect } from "react";
 
-const ToDo = () => {
+export default function App() {
+  const [products, setProducts] = useState([]);
+
+  const fetchProducts = async () => {
+    const data = await fetch(""); // Add valid URL here
+    const json = await data.json();
+
+    if (json && json.products) {
+      setProducts(json.products);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
-    <div class='bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl'>
-      ToDo
+    <div className="products">
+      {products.map((p) => (
+        <span key={p.id}>{p.title}</span>
+      ))}
     </div>
   )
 }
-
-export default ToDo
