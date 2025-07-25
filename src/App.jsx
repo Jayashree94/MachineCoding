@@ -18,9 +18,13 @@ export default function App() {
 
   return (
     <div className="products">
-      {products.map((p) => (
-        <span key={p.id}>{p.title}</span>
-      ))}
+      <div class="bg-white dark:bg-black text-black dark:text-white">
+        Dark mode enabled
+        <h1>hello</h1>
+      </div>
+      {products.map((p) => {
+       return <span key={p.id}>{p.title}</span>
+})}
     </div>
   )
 }
