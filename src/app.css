@@ -1,0 +1,42 @@
+.App {
+    font-family: sans-serif;
+   
+    
+}
+h1, .Page {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_list{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin: 2px;
+    padding:5px;
+
+}
+
+.product_card img{
+    width: 150px;
+
+
+}
+
+.page-num {
+    cursor: pointer;
+    margin: 2px;
+    padding: 10px;
+    border: 1px solid black;
+}
